@@ -11,9 +11,9 @@ __init__.pyc
 thirdparty/miniconda/miniconda
 
 # datasets
-*.rna
-data/eterna/interim/*.txt
-data/eterna/raw/*.txt
+# *.rna
+# data/eterna/interim/*.txt
+# data/eterna/raw/*.txt
 
 # examples
 results/
