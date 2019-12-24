@@ -1,7 +1,6 @@
 #!/bin/bash
 TARGET_STRUCTURE_PATH=$1
 
-source thirdparty/miniconda/miniconda/bin/activate learna
 /usr/bin/time -f"%U" python -m src.learna.design_rna \
   --mutation_threshold 5 \
   --batch_size 126 \

@@ -5,14 +5,14 @@ import requests
 def _download_dataset_from_http(url, download_path):
     response = requests.get(url, stream=True)
     with open(download_path, "wb+") as dataset_file:
-        progress_bar = tqdm(
-            unit="B",
-            unit_scale=True,
-            unit_divisor=1024,
-            total=int(response.headers["Content-Length"]),
-        )
-        for data in tqdm(response.iter_content()):
-            progress_bar.update(len(data))
+        # progress_bar = tqdm(
+        #     unit="B",
+        #     unit_scale=True,
+        #     unit_divisor=1024,
+        #     total=int(response.headers["Content-Length"]),
+        # )
+        for data in response.iter_content():
+            # progress_bar.update(len(data))
             dataset_file.write(data)
 
 
